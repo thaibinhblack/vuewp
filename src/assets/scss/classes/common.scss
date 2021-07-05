@@ -1,0 +1,62 @@
+$container-padding-horizontal: fn.rem(36);
+
+.page-max-container {
+  max-width: fn.rem(1610);
+  margin: 0 auto;
+}
+
+.page-container {
+  max-width: fn.rem(1275) + ($container-padding-horizontal * 2);
+  margin: 0 auto;
+}
+
+.page-min-container {
+  max-width: fn.rem(848) + ($container-padding-horizontal * 2);
+  padding: 0 $container-padding-horizontal;
+  margin: 0 auto;
+
+  .page-container {
+    max-width: fn.rem(848);
+    padding: 0;
+  }
+}
+
+.hidden-desktop {
+  @include mx.mq($BREAKPOINT-LG) {
+    display: none;
+  }
+}
+
+.hidden-mobile {
+  @media screen and (max-width: ($BREAKPOINT-MD - 1) * 1px) {
+    display: none;
+  }
+}
+
+.\--txt-uppercase {
+  text-transform: uppercase;
+}
+
+.\--txt-center {
+  text-align: center;
+}
+
+.\--txt-right {
+  text-align: right;
+}
+
+.\--txt-left {
+  text-align: left;
+}
+
+.\--txt-done-decoration {
+  text-decoration: none;
+}
+
+.\--main-bg {
+  background-color: colors.$white-1;
+}
+
+.\--strong {
+  @include mx.font-open-sans-bold;
+}

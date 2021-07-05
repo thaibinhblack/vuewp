@@ -1,0 +1,51 @@
+@include mx.font-face(fonts.$name-font, '../fonts/OpenSans-Regular');
+
+html {
+  @include mx.font-open-sans-regular;
+  font-size: fonts.$default-rem;
+  background-color: colors.$body-bg;
+  color: colors.$body-txt;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-size: fonts.$size-default;
+  line-height: 23.4px / fonts.$size-default;
+  background: colors.$body-bg;
+  color: colors.$body-txt;
+
+  &.\--freeze {
+    height: 100%;
+    overflow: hidden !important;
+
+    html.ios & {
+      position: fixed;
+      width: 100%;
+    }
+  }
+}
+
+.\--add-fixed-border {
+  html[class*="--scroll-"] & {
+    border-right-width: 0;
+    border-right-style: solid;
+    border-right-color: colors.$white-1;
+  }
+
+  @for $i from 13 through 18 {
+    html.\--scroll-#{$i} & {
+      border-right-width: $i * 1px;
+    }
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+
+  &:not([src]),
+  &[src=""] {
+    display: none;
+  }
+}

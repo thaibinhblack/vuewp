@@ -1,0 +1,21 @@
+@use "sass:string";
+@use  "functions" as fn;
+
+$grid-breakpoints: (
+  xs: $BREAKPOINT-XS,
+  sm: fn.addUnit($BREAKPOINT-SM, 'px'),
+  md: fn.addUnit($BREAKPOINT-MD, 'px'),
+  lg: fn.addUnit($BREAKPOINT-LG, 'px'),
+  xl: fn.addUnit($BREAKPOINT-XL, 'px'),
+  xxl: fn.addUnit($BREAKPOINT-XXL, 'px'),
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$grid-gutter-width: fn.rem(15);
