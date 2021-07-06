@@ -5,7 +5,7 @@ export const ALL_POSTS = gql`
   posts {
     nodes {
       postId
-      content(format: RENDERED)
+      title
       dateGmt
       tags {
         edges {

@@ -1,21 +1,22 @@
 <template>
 <div class="app">
+    <header-layout />
     <router-view />
 </div>
 </template>
 
 <script>
-import {
-  ALL_POSTS
-} from '@/graphql/allPost';
+import HeaderLayout from '@/components/statefull/HeaderLayout';
 
 export default {
   name: 'App',
 
-  created() {
-    this.$apollo.query({
-      query: ALL_POSTS
-    });
-  }
+  components: {
+    HeaderLayout,
+  },
 };
 </script>
+
+<style lang="scss">
+
+</style>

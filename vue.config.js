@@ -1,4 +1,5 @@
 const isDevelopment = process.env.NODE_ENV === 'development';
+const breakpoints = require('./src/breakpoints.json');
 
 module.exports = {
   publicPath: '/',
@@ -9,6 +10,20 @@ module.exports = {
     sourceMap: false,
     loaderOptions: {
       scss: {
+        additionalData: `
+          @use "@/assets/scss/variables/colors";
+          @use "@/assets/scss/variables/fonts";
+          @use "@/assets/scss/variables/zindex";
+          @use "@/assets/scss/variables/icons";
+          @use "@/assets/scss/mixins" as mx;
+          @use "@/assets/scss/functions" as fn;
+          $BREAKPOINT-XS: ${breakpoints.XS};
+          $BREAKPOINT-SM: ${breakpoints.SM};
+          $BREAKPOINT-MD: ${breakpoints.MD};
+          $BREAKPOINT-LG: ${breakpoints.LG};
+          $BREAKPOINT-XL: ${breakpoints.XL};
+          $BREAKPOINT-XXL: ${breakpoints.XXL};
+        `,
       },
     },
   },

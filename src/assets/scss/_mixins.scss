@@ -57,17 +57,7 @@
   cursor: pointer;
 }
 
-@mixin font-open-sans-regular {
-  font-family: fonts.$open-sans-regular;
+@mixin font-helveticaNeue-regular {
+  font-family: fonts.$open-helveticaNeue-regular;
   font-weight: 400;
-}
-
-@mixin font-open-sans-italic {
-  font-family: fonts.$open-sans-italic;
-  font-weight: 300;
-}
-
-@mixin font-open-sans-bold {
-  font-family: fonts.$open-sans-bold;
-  font-weight: 700;
 }

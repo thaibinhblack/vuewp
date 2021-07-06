@@ -1,0 +1,42 @@
+.\--txt-small {
+  font-size: fn.rem(13);
+}
+
+.\--txt-link {
+  $this: &;
+
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: fn.rem(2);
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    bottom: 0;
+    height: fn.rem(1);
+    background-color: colors.$color-txt-link-bottom;
+    transition: width .5s ease-in;
+  }
+
+  &:hover, &.\--active, &:active, &:focus {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &.\--white::before {
+    background-color: colors.$white-1;
+  }
+}
+
+.\--txt-center {
+  text-align: center;
+}
+
+.\--link {
+  text-decoration: none;
+  color: inherit;
+}

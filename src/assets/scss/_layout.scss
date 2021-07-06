@@ -1,7 +1,13 @@
-@include mx.font-face(fonts.$name-font, '../fonts/OpenSans-Regular');
+
+@include mx.font-face('HelveticaNeue-Light', '/fonts/HelveticaNeue-Light');
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 html {
-  @include mx.font-open-sans-regular;
+  @include mx.font-helveticaNeue-regular;
   font-size: fonts.$default-rem;
   background-color: colors.$body-bg;
   color: colors.$body-txt;

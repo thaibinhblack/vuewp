@@ -2,14 +2,7 @@ import router from '@/router';
 import store from '@/store';
 import {
   ACTIONS as ROOT_ACTIONS,
-} from '@/store/modules/root.d';
-import {
-  GETTERS as GETTERS_ACCOUNT,
-} from '@/store/modules/account.d';
-import {
-  login,
-} from '@/router/paths';
-
+} from '@/store/modules/global.d';
 // Define page name
 router.afterEach((to) => {
   document.documentElement.dataset.page = `${to.name}-page`;
