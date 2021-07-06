@@ -2,7 +2,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 const breakpoints = require('./src/breakpoints.json');
 
 module.exports = {
-  publicPath: isDevelopment ? '/' : '/app/dist/',
+  publicPath: isDevelopment ? '/' : '/',
   filenameHashing: false,
   productionSourceMap: false,
   css: {
